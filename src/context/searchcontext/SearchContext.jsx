@@ -16,7 +16,7 @@ function SearchProvider({ children }) {
 				suggestions: [],
 	});
 
-	// FETCH DATA FROM GIPHY AUTOCOMPLETE ENDPOINT
+// FETCH DATA FROM GIPHY AUTOCOMPLETE ENDPOINT
 	useEffect(() => {
 		fetch(
 			`https://api.giphy.com/v1/gifs/search/tags?api_key=TSwctyoT1ZKon74EIDnDGdGY5QTz9Ezj&q=${searchQuery}&limit=6&offset=0`
