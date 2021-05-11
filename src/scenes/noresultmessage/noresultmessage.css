@@ -1,0 +1,20 @@
+/* DESKTOP STYLES */
+@media (min-width: 751px) {
+    .noresult-message {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+    }
+}
+
+/* MOBILE STYLES */
+@media (min-width: 320px) and (max-width: 750px) {
+    .noresult-message {
+        width: 85%;
+        height: 100vh;
+        display: flex;
+        padding-top: 100px;
+    }
+}

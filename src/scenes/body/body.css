@@ -1,0 +1,20 @@
+.body.light {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color:  #E7E7E7;
+    color: #572EE5;
+    transition: all .3s ease-in-out;
+}
+.body.dark {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #212121;
+    color: white;
+    transition: all .3s ease-in-out;
+}
