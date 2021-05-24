@@ -3,7 +3,7 @@
     width: 100%;
     z-index: 22;
     border-radius: 50px;
-    border: 1px solid rgb(145, 145, 145);
+    border: 1px solid rgb(172, 172, 172);
     overflow: hidden;
     transition: all .3s ease-in-out;
 }
@@ -36,6 +36,7 @@
 
 .search-container{
     display: flex;
+    transition: all .3s ease-in-out;
 }
 
 .search-bar.light {
@@ -64,26 +65,25 @@
 
 .search-btn {
     width: 86px;
-    background-color: rgb(87, 46, 229);
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 0%;
-    z-index: 1;
+    background-color: rgb(87, 46, 229);
     cursor: pointer;
     padding: 20px;
 }
 
 .reset-btn {
-    width: 86px;
+    position: absolute;
+    width: 60px;
+    height: 61px;
     display: flex;
     align-items: center;
-    background-color: transparent;
     justify-content: center;
-    right: 0%;
-    z-index: 1;
+    background-color: transparent;
+    right: 80px;
     font-size: 30px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .search-btn img {
