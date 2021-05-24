@@ -58,7 +58,7 @@ function SearchBar({ placeholder, inputClass, suggestionClass }) {
 						type="text"
 						/>
 					<AnimatePresence>
-						{showSuggest === true && autocomplete.suggestions.length !== 0 && (
+						{searchQuery !== "" && (
 							<ResetButton onClick={handleReset} />
 						)}
 					</AnimatePresence>
@@ -97,4 +97,3 @@ function ResetButton({ onClick }) {
 }
 
 export default SearchBar;
-
