@@ -66,11 +66,16 @@ function SearchBar({ placeholder, inputClass, suggestionClass }) {
 				</div>
 				{showSuggest === true && autocomplete.suggestions.length !== 0 && (
 					<ul className={suggestionClass}>
-							{autocomplete.suggestions.map((suggestion, index) => (
-								<motion.li transition={{ type: "spring", duration: 0 }} initial={{opacity: 0, x: "-100%"}} animate={{opacity: 1,x: 0}} key={index} onClick={() => handleSuggestion(suggestion.name)}>
-									{suggestion.name}
-								</motion.li>
-							))}
+						{autocomplete.suggestions.map((suggestion, index) => (
+							<motion.li 
+								transition={{ type: "spring", duration: 0 }} 
+								initial={{opacity: 0, x: "-100%"}} 
+								animate={{opacity: 1,x: 0}} key={index} 
+								onClick={() => handleSuggestion(suggestion.name)}
+								>
+								{suggestion.name}
+							</motion.li>
+						))}
 					</ul>
 				)}
 			</div>
