@@ -64,7 +64,7 @@
 
 .search-btn {
     width: 86px;
-    background-color: #572EE5;
+    background-color: rgb(87, 46, 229);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,14 +76,12 @@
 
 .reset-btn {
     width: 86px;
-    background-color: #572EE5;
-    color:white;
     display: flex;
     align-items: center;
+    background-color: transparent;
     justify-content: center;
     right: 0%;
     z-index: 1;
-    cursor: pointer;
     font-size: 30px;
     padding: 20px;
 }
