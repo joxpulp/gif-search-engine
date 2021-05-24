@@ -1,6 +1,7 @@
 import {useContext } from "react";
 import { SearchContext } from "../../context/searchcontext/SearchContext";
 import { LoadingContext } from "../../context/loadingcontext/LoadingContext";
+import { DarkModeContext} from "../../context/darkmodecontext/DarkModeContext";
 import { BsX } from "react-icons/bs";
 import searchIcon from "../../assets/svg/icon-search-mod-noc.svg";
 import './searchbar.css'
@@ -55,11 +56,10 @@ function SearchBar({ placeholder, inputClass, suggestionClass }) {
 						placeholder={placeholder}
 						type="text"
 					/>
-					{showSuggest === true && autocomplete.suggestions.length !== 0 ? (
+					{showSuggest === true && autocomplete.suggestions.length !== 0 && (
 						<ResetButton onClick={handleReset} />
-					) : (
-						<SearchButton onClick={handleClickSearch} />
 					)}
+					<SearchButton onClick={handleClickSearch} />
 				</div>
 				{showSuggest === true && autocomplete.suggestions.length !== 0 && (
 					<ul className={suggestionClass}>
@@ -84,9 +84,11 @@ function SearchButton({ onClick }) {
 }
 
 function ResetButton({ onClick }) {
+	const { isDarkMode } = useContext(DarkModeContext)
+
 	return (
-		<div onClick={onClick} className="reset-btn">
-			<BsX />
+		<div  className="reset-btn">
+			<BsX style={{color: isDarkMode ? "rgb(255, 255, 255, .5)" : "rgb(87, 46, 229, .4)", cursor: "pointer"}} onClick={onClick} />
 		</div>
 	);
 }
