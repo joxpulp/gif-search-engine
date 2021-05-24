@@ -1,4 +1,5 @@
 import {useContext } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
 import { SearchContext } from "../../context/searchcontext/SearchContext";
 import { LoadingContext } from "../../context/loadingcontext/LoadingContext";
 import { DarkModeContext} from "../../context/darkmodecontext/DarkModeContext";
@@ -55,19 +56,21 @@ function SearchBar({ placeholder, inputClass, suggestionClass }) {
 						className={inputClass}
 						placeholder={placeholder}
 						type="text"
-					/>
-					{showSuggest === true && autocomplete.suggestions.length !== 0 && (
-						<ResetButton onClick={handleReset} />
-					)}
+						/>
+					<AnimatePresence>
+						{showSuggest === true && autocomplete.suggestions.length !== 0 && (
+							<ResetButton onClick={handleReset} />
+						)}
+					</AnimatePresence>
 					<SearchButton onClick={handleClickSearch} />
 				</div>
 				{showSuggest === true && autocomplete.suggestions.length !== 0 && (
 					<ul className={suggestionClass}>
-						{autocomplete.suggestions.map((suggestion, index) => (
-							<li key={index} onClick={() => handleSuggestion(suggestion.name)}>
-								{suggestion.name}
-							</li>
-						))}
+							{autocomplete.suggestions.map((suggestion, index) => (
+								<motion.li transition={{ type: "spring", duration: 0 }} initial={{opacity: 0, x: "-100%"}} animate={{opacity: 1,x: 0}} key={index} onClick={() => handleSuggestion(suggestion.name)}>
+									{suggestion.name}
+								</motion.li>
+							))}
 					</ul>
 				)}
 			</div>
@@ -87,10 +90,11 @@ function ResetButton({ onClick }) {
 	const { isDarkMode } = useContext(DarkModeContext)
 
 	return (
-		<div  className="reset-btn">
+		<motion.div transition={{ type: "spring", duration: 0.4 }} initial={{opacity: 0, x: "-100%"}} animate={{opacity: 1,x: 0}} exit={{opacity: 0}}  className="reset-btn">
 			<BsX style={{color: isDarkMode ? "rgb(255, 255, 255, .5)" : "rgb(87, 46, 229, .4)", cursor: "pointer"}} onClick={onClick} />
-		</div>
+		</motion.div>
 	);
 }
 
 export default SearchBar;
+
