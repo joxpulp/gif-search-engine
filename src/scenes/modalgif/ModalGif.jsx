@@ -1,9 +1,7 @@
 import {useContext} from 'react';
-import {motion} from 'framer-motion';
 import {SearchContext} from '../../context/searchcontext/SearchContext';
 import { DarkModeContext } from "../../context/darkmodecontext/DarkModeContext";
-import './modalgif.css'
-
+import {motion} from 'framer-motion';
 
 function ModalGif() {
     const { isDarkMode } = useContext(DarkModeContext);

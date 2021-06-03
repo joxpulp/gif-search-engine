@@ -5,7 +5,6 @@ import { SearchContext } from "../../context/searchcontext/SearchContext";
 import SearchBar from "../search-bar/SearchBar";
 import ilustrationLight from "../../assets/svg/ilustra_header.svg";
 import ilustrationDark from "../../assets/svg/ilustra_header_noct.svg";
-import './search.css'
 
 function Search() {
 	const { isDarkMode } = useContext(DarkModeContext);

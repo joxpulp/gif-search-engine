@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@import './App.css';
+@import './components/button/button.css';
+@import './components/loadingspinner/loadingspinner.css';
+@import './scenes/search-bar/searchbar.css';
+@import './scenes/header/header.css';
+@import './scenes/search/search.css';
+@import './scenes/body/body.css';
+@import './scenes/gifscontainer/gifcontainer.css';
+@import './scenes/welcomemessage/welcomemessage.css';
+@import './scenes/noresultmessage/noresultmessage.css';
+@import './scenes/gifcard/gifcard.css';
+@import './scenes/modalgif/modalgif.css';

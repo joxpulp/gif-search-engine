@@ -1,5 +1,4 @@
 import {motion} from 'framer-motion';
-import './gifcard.css'
 
 function GifCard({ gifurl, slug, onLoad, opacityAnimation, onClickImage }) {
 	return (

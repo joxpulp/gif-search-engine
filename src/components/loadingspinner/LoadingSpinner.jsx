@@ -1,6 +1,5 @@
 import HashLoader from "react-spinners/HashLoader";
 import { motion } from 'framer-motion';
-import './loadingspinner.css'
 
 function LoadingSpinner({ children, spinnerColor, textColor }) {
 	return (

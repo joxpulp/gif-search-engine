@@ -1,11 +1,9 @@
 import { useContext } from "react";
-import { motion } from 'framer-motion';
 import { DarkModeContext } from "../../context/darkmodecontext/DarkModeContext";
 import Button from "../../components/button/Button";
 import logoLight from "../../assets/svg/logo-desktop.svg";
 import logoDark from "../../assets/svg/logo-modo-noct.svg";
-import './header.css'
-
+import { motion } from 'framer-motion';
 
 function Header() {
 	const { isDarkMode, setIsDarkMode } = useContext(DarkModeContext);

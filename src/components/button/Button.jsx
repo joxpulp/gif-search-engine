@@ -1,5 +1,3 @@
-import './button.css'
-
 function Button({children, bgColor, borderColor, border, textColor, borderRadius, onClick}) {
 	return (
 		<button 

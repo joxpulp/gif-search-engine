@@ -1,13 +1,14 @@
 import { useContext } from "react";
-import { AnimatePresence } from "framer-motion";
 import { DarkModeContext } from "./context/darkmodecontext/DarkModeContext";
-import { SearchContext } from "./context/searchcontext/SearchContext";
 import LoadingProvider from "./context/loadingcontext/LoadingContext";
 import Header from "./scenes/header/Header";
 import Search from "./scenes/search/Search";
 import Body from "./scenes/body/Body";
 import ModalGif from "./scenes/modalgif/ModalGif";
-import './App.css'
+import { SearchContext } from "./context/searchcontext/SearchContext";
+import {AnimatePresence} from 'framer-motion';
+
+import "./AllStyles.css";
 
 function App() {
 	const { isDarkMode } = useContext(DarkModeContext);
