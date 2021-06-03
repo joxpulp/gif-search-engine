@@ -6,8 +6,7 @@ import Search from "./scenes/search/Search";
 import Body from "./scenes/body/Body";
 import ModalGif from "./scenes/modalgif/ModalGif";
 import { SearchContext } from "./context/searchcontext/SearchContext";
-import {AnimatePresence} from 'framer-motion';
-
+import { AnimatePresence } from "framer-motion";
 import "./AllStyles.css";
 
 function App() {

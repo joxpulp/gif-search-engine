@@ -7,13 +7,13 @@ import DarkModeProvider from './context/darkmodecontext/DarkModeContext';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <SearchProvider>
-    <DarkModeProvider>
-      <App />
-    </DarkModeProvider>
-    </SearchProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<SearchProvider>
+			<DarkModeProvider>
+				<App />
+			</DarkModeProvider>
+		</SearchProvider>
+	</React.StrictMode>,
+	document.getElementById("root")
 );
 
