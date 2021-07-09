@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas componente <GifCard/> GifCard se renderiza correctamente 1`] = `
+<ForwardRef(MotionComponent)
+  animate={
+    Object {
+      "opacity": undefined,
+    }
+  }
+  className="gif-card"
+  initial={
+    Object {
+      "opacity": 0,
+    }
+  }
+>
+  <img
+    className="gif-image"
+    src="https://localhost/gif.jpg"
+  />
+</ForwardRef(MotionComponent)>
+`;

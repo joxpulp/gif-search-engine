@@ -11,22 +11,22 @@ function SearchProvider({ children }) {
   const url =
     searchClick &&
     `https://api.giphy.com/v1/gifs/search?api_key=TSwctyoT1ZKon74EIDnDGdGY5QTz9Ezj&q=${searchQuery}&limit=12&offset=0&rating=g&lang=en`;
-  const { data, setData } = useFetch(url);
-  const autocomplete = useFetch(
+  const { data:gifs, setData } = useFetch(url);
+  const {data:autocomplete} = useFetch(
     `https://api.giphy.com/v1/gifs/search/tags?api_key=TSwctyoT1ZKon74EIDnDGdGY5QTz9Ezj&q=${searchQuery}&limit=6&offset=0`
   );
 
   // SET SEARCHCLICK TO FALSE IF NO GIF IS RETURNED
   useEffect(() => {
-    data.data.length === 0 && data.fetched === true && setSearchClick(false);
-  }, [data.fetched, data.data.length, setSearchClick]);
+    gifs.data.length === 0 && gifs.fetched === true && setSearchClick(false);
+  }, [gifs.fetched, gifs.data.length, setSearchClick]);
 
   return (
     <SearchContext.Provider
       value={{
         searchQuery,
         setSearchQuery,
-        data,
+        gifs,
         setData,
         showSuggest,
         setShowSuggest,

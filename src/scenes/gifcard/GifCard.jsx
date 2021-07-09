@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import PropTypes from 'prop-types'
 
 function GifCard({ gifurl, slug, onLoad, opacityAnimation, onClickImage }) {
 	return (
@@ -9,3 +10,7 @@ function GifCard({ gifurl, slug, onLoad, opacityAnimation, onClickImage }) {
 }
 
 export default GifCard;
+
+GifCard.propTypes = {
+	gifurl: PropTypes.string.isRequired,
+}

@@ -7,12 +7,12 @@ import GifCard from "../gifcard/GifCard";
 
 function GifContainer() {
 	const { isDarkMode } = useContext(DarkModeContext);
-	const { data, setSearchClick, setSelectedGif } = useContext(SearchContext);
+	const { gifs, setSearchClick, setSelectedGif } = useContext(SearchContext);
 	const { isLoading, setIsLoading, counter } = useContext(LoadingContext);
   
 	const imageLoaded = () => {
 	  counter.current += 1;
-	  counter.current >= data.data.length && setIsLoading(false);
+	  counter.current >= gifs.data.length && setIsLoading(false);
 	  setSearchClick(false);
 	};
   
@@ -29,7 +29,7 @@ function GifContainer() {
 			</span>
 		  </LoadingSpinner>
 		)}
-		{data.data.map((gif) => (
+		{gifs.data.map((gif) => (
 		  <GifCard
 			opacityAnimation={isLoading ? 0 : 1}
 			key={gif.id}

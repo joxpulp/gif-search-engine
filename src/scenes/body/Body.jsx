@@ -7,13 +7,13 @@ import GifContainer from "../gifscontainer/GifContainer";
 
 function Body() {
 	const { isDarkMode } = useContext(DarkModeContext);
-	const { data } = useContext(SearchContext);
+	const { gifs } = useContext(SearchContext);
   
 	return (
 	  <div className={`body ${isDarkMode ? "dark" : "light"}`}>
-		{data.data.length === 0 && data.fetched === false ? (
+		{gifs.data.length === 0 && gifs.fetched === false ? (
 		  <WelcomeMessage />
-		) : data.data.length === 0 && data.fetched === true ? (
+		) : gifs.data.length === 0 && gifs.fetched === true ? (
 		  <NoResultMessage />
 		) : (
 		  <GifContainer />

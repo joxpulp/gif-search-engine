@@ -74,9 +74,9 @@ function SearchBar({ placeholder, inputClass, suggestionClass }) {
 			</AnimatePresence>
 			<SearchButton onClick={handleClickSearch} />
 		  </div>
-		  {showSuggest === true && autocomplete.data.data.length !== 0 && (
+		  {showSuggest === true && autocomplete.data.length !== 0 && (
 			<ul className={suggestionClass}>
-			  {autocomplete.data.data.map((suggestion, index) => (
+			  {autocomplete.data.map((suggestion, index) => (
 				<motion.li
 				  transition={{ type: "spring", duration: 0 }}
 				  initial={{ opacity: 0, x: "-100%" }}
